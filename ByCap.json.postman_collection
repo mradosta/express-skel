@@ -1,0 +1,56 @@
+{
+	"id": "fec85cab-d992-823a-0cc7-0b566678daae",
+	"name": "Test API",
+	"description": "",
+	"order": [
+		"a6f4b101-825c-5c3a-a0c9-25bd1172b55e",
+		"4d5b62d0-6aa8-df5f-1229-4112e6bb5840"
+	],
+	"folders": [],
+	"timestamp": 1453802697097,
+	"owner": "",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "4d5b62d0-6aa8-df5f-1229-4112e6bb5840",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:3000/users",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "fec85cab-d992-823a-0cc7-0b566678daae",
+			"data": [],
+			"dataMode": "params",
+			"name": "List Users",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1453802840326,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a6f4b101-825c-5c3a-a0c9-25bd1172b55e",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:3000/users",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1453802811108,
+			"name": "Add User",
+			"description": "",
+			"collectionId": "fec85cab-d992-823a-0cc7-0b566678daae",
+			"responses": [],
+			"rawModeData": "{\n    \"firstname\": \"test name\",\n    \"email\": \"test@email.com\"\n}"
+		}
+	]
+}
