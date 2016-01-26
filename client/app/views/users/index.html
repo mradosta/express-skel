@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 ng-bind="'USERS' | translate" class="panel-title"></h3>
+  </div>
+
+  <div class="panel-body">
+
+    <table class="table table-striped">
+      <tr ng-repeat="item in data">
+        <td>
+          <span ng-click="go('/users-edit/' + item.id)" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          <span ng-click="delete(item.id)" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </td>
+
+        <td ng-bind="item.firstname"></td>
+        <td ng-bind="item.email"></td>
+      </tr>
+    </table>
+
+
+  </div>
+</div>

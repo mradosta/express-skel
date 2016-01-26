@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 ng-bind="'USERS' | translate" class="panel-title"></h3>
+  </div>
+
+  <div class="panel-body">
+
+    <table class="table table-striped">
+      <tr ng-repeat="item in data">
+        <td>
+          <span ng-click="item.id" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          <span ng-click="item.id" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </td>
+
+        <td ng-bind="item.firstname"></td>
+        <td ng-bind="item.email"></td>
+      </tr>
+    </table>
+
+    <form ng-submit="submitForm()" name="dataForm" novalidate class="form-horizontal">
+
+  		<div class="form-group" ng-class="{ 'has-error' : dataForm.firstname.$invalid && !dataForm.firstname.$pristine }">
+  			<label class="col-md-4 control-label" for="firstname">Nombre</label>
+  			<div class="col-md-5">
+  			  <input ng-model="data.firstname" ng-minlength="3" id="firstname" name="firstname" type="text" class="form-control input-md">
+          <p ng-show="dataForm.firstname.$error.minlength" class="help-block">El nombre es muy corto.</p>
+  			</div>
+  		</div>
+
+      <div class="form-group" ng-class="{ 'has-error' : dataForm.email.$invalid && !dataForm.email.$pristine }">
+  			<label class="col-md-4 control-label" for="email">Email</label>
+  			<div class="col-md-5">
+  			  <input ng-model="data.email" id="email" name="email" type="email" class="form-control input-md">
+          <p ng-show="dataForm.email.$error.email" class="help-block">Ingrese un email valido.</p>
+  			</div>
+  		</div>
+
+
+      <button ng-bind="'SAVE' | translate" ng-disabled="dataForm.$invalid" type="submit" class="btn btn-success pull-right"></button>
+
+    </form>
+  </div>
+</div>
